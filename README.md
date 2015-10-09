@@ -1,5 +1,4 @@
   
-
 Recap des principales commandes:
 
 recuperer le depot pour la premiere fois (totalité du projet): 
