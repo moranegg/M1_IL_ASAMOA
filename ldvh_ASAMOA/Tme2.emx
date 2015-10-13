@@ -678,8 +678,8 @@
       <ownedComment xmi:id="_QaY5QGXKEeWiFpaTorXPHw">
         <body>&lt;p>gérer section : définir objet, définir un nouvel enchainement&lt;/p>&lt;p>&lt;/p></body>
       </ownedComment>
-      <ownedUseCase xmi:id="_wjGe8GXGEeWiFpaTorXPHw" name="creer livre"/>
-      <ownedUseCase xmi:id="_0kBWsGXGEeWiFpaTorXPHw" name="modifier livre" subject="_oNZNsGXFEeWiFpaTorXPHw">
+      <ownedUseCase xmi:id="_wjGe8GXGEeWiFpaTorXPHw" name="gérer livre"/>
+      <ownedUseCase xmi:id="_0kBWsGXGEeWiFpaTorXPHw" name="gérer objets" subject="_oNZNsGXFEeWiFpaTorXPHw">
         <extensionPoint xmi:id="_exKccGXIEeWiFpaTorXPHw" name="ExtensionPoint1"/>
       </ownedUseCase>
       <ownedUseCase xmi:id="_KSwUAGXHEeWiFpaTorXPHw" name="visualiser graphe">
