@@ -10,16 +10,17 @@
  -->
 <program
 ><!-- test:name description='alternative (alternant)' 
---><alternative
-><condition
-><boolean value='false'
-/></condition
-><consequence
-><integer value='1'
-/></consequence
-><alternant
-><integer value='2'
-/></alternant
-></alternative
-></program
+-->
+<alternative>
+<condition>
+<boolean value='false'/>
+</condition>
+<consequence>
+<integer value='1'/>
+</consequence>
+<alternant>
+<integer value='2'/>
+</alternant>
+</alternative>
+</program
 >

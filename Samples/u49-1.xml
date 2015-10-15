@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<program><!-- test:name description='bloc local avec 2 variables, TME1' -->
+	<block>
+		<bindings>
+			<binding>
+				<variable name='a' />
+				<initialisation>
+					<integer value='2' />
+				</initialisation>
+			</binding>
+			<binding>
+				<variable name='b' />
+				<initialisation>
+					<integer value='3' />
+				</initialisation>
+			</binding>
+			<binding>
+				<variable name='c' />
+				<initialisation>
+					<integer value='1' />
+				</initialisation>
+			</binding>
+		</bindings>
+		<body>
+		  <alternative>
+			<condition>
+				<binaryOperation operator='&gt;=' >
+				<leftOperand>
+					<binaryOperation operator='-'>
+						<leftOperand>
+							<binaryOperation operator='*'>
+								<leftOperand>
+									<variable name='b' />
+								</leftOperand>
+								<rightOperand>
+									<variable name='b' />
+								</rightOperand>
+							</binaryOperation>
+						</leftOperand>
+						<rightOperand>
+							<binaryOperation operator='*'>
+								<leftOperand>
+									<integer value='4' />
+								</leftOperand>
+								<rightOperand>
+									<binaryOperation operator='*'>
+										<leftOperand>
+											<variable name='a' />
+										</leftOperand>
+										<rightOperand>
+											<variable name='c' />
+										</rightOperand>
+									</binaryOperation>
+								</rightOperand>
+							</binaryOperation>
+						</rightOperand>
+					</binaryOperation>
+				</leftOperand>
+				<rightOperand>
+					<integer value='0' />
+				</rightOperand>
+				</binaryOperation>
+			</condition>
+			<consequence>
+				<invocation>
+					<function>
+						<variable name='print' />
+					</function>
+					<arguments>
+						
+						  <string>discriminant positif: deux racines</string>
+						
+					</arguments>
+				</invocation>
+			</consequence>
+			<alternant>
+			     <invocation>
+                    <function>
+                        <variable name='print' />
+                    </function>
+                    <arguments>
+                        
+                          <string>discriminant negatif: aucune racine</string>
+                        
+                    </arguments>
+                </invocation>
+			</alternant>
+            </alternative>
+
+		</body>
+	</block>
+</program>

@@ -146,7 +146,7 @@ public class InterpreterTest {
         final File[] testFiles = samplesDir.listFiles(ff);
         assertNotNull(testFiles);
         
-        if ( testFiles.length == 0 ) {
+     ;   if ( testFiles.length == 0 ) {
             final String msg = "Cannot find a single test like " + pattern;
             throw new RuntimeException(msg);
         }

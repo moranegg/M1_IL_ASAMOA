@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<program><!-- test:name description='bloc local avec 2 variables, TME1' -->
+	<!-- <affectation name='a'> <value> <boolean value='true'/> </value> </affectation> -->
+	<integer value='34' />
+</program>

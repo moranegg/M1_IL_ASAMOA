@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <!-- -*- coding: utf-8 -*- -->
+  <include href="grammar1rng"/>
+  <define name="expression" combine="choice">
+    <choice>
+      <ref name="affectation"/>
+      <ref name="loop"/>
+    </choice>
+  </define>
+  <define name="program">
+    <element name="program">
+      <zeroOrMore>
+        <ref name="functionDefinition"/>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="affectation">
+    <element name="affectation">
+      <attribute name="name">
+        <data type="Name">
+          <except>
+            <data type="Name">
+              <param name="pattern">(ilp|ILP)</param>
+            </data>
+          </except>
+        </data>
+      </attribute>
+      <element name="value">
+        <ref name="expression"/>
+      </element>
+    </element>
+  </define>
+  <define name="loop">
+    <element name="loop">
+      <element name="condition">
+        <ref name="expression"/>
+      </element>
+      <element name="treatment">
+        <oneOrMore>
+          <ref name="expression"/>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="functionDefinition">
+    <element name="functionDefinition">
+      <attribute name="name">
+        <data type="Name">
+          <except>
+            <data type="Name">
+              <param name="pattern">(ilp|ILP)</param>
+            </data>
+          </except>
+        </data>
+      </attribute>
+      <element name="arguments">
+        <zeroOrMore>
+          <ref name="variable"/>
+        </zeroOrMore>
+      </element>
+      <element name="procedure">
+        <oneOrMore>
+          <ref name="expression"/>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+</grammar>
